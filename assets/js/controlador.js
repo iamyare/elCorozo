@@ -127,7 +127,8 @@ const ejecutarComando = (comando) => {
 
 const leerBaseDatos = () => {
 	var archivo = new XMLHttpRequest();
-	archivo.open("GET", "./data/productos.csv", false);
+	const rutaArchivo = "./assets/data/productos.csv";
+	archivo.open("GET", rutaArchivo, false);
 	archivo.send(null);
 
 	var texto = archivo.responseText;
